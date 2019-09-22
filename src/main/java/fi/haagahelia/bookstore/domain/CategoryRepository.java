@@ -1,9 +1,14 @@
 package fi.haagahelia.bookstore.domain;
 
 import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 
-public interface BookRepository extends CrudRepository<Book, Long> {
-	List<Book> findByNameIgnoreCase(String name);
+
+public interface CategoryRepository extends CrudRepository<Category, Long> {
+
+    List<Category> findByName(String name); 
+
 }
+
